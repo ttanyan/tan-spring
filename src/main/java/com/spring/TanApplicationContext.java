@@ -29,7 +29,7 @@ public class TanApplicationContext {
     public TanApplicationContext(Class configClass) {
 
         this.configClass = configClass;
-        //扫描
+        //扫描AppConfig下的包路径下的所有类，并将带有@Component注解的类注册到beanDefinitionMap中
         scan(configClass);
 
         //创建Bean实例
