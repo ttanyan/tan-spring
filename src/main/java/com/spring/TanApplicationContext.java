@@ -150,7 +150,7 @@ public class TanApplicationContext {
                 for (File f : file.listFiles()) {
                     String absolutePath = f.getAbsolutePath();
                     String path = absolutePath.substring(absolutePath.indexOf("com"), absolutePath.indexOf(".class"));
-                    path = path.replace("\\", ".");
+                    path = path.replace("/", ".");
 
                     try {
                         Class<?> aClass = classLoader.loadClass(path);
