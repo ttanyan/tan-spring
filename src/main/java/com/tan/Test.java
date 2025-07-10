@@ -14,8 +14,11 @@ public class Test {
 
     public static void main(String[] args) {
 
+
+
         TanApplicationContext tanApplicationContext = new TanApplicationContext(AppConfig.class);
         UserService userService = (UserService) tanApplicationContext.getBean("userService");
+
         userService.test();
 
     }
